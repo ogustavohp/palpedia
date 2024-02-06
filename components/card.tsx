@@ -56,23 +56,27 @@ export function Card({
               src={`/icon/element/${e}.webp`}
               width={20}
               height={20}
-              className={`absolute ${i === 0 ? 'top-5 left-2' : 'top-8 left-5'}`}
+              className={`absolute ${i === 0 ? 'top-6 left-2' : 'top-9 left-5'}`}
             />
           ))}
           {/* <Image alt={e} /> */}
         </span>
 
         {/* work */}
-        <span className="flex flex-col gap-1 absolute right-3 top-2 flex-wrap max-h-9">
+        <span className="flex rtl flex-col gap-1 absolute right-3 top-2 flex-wrap max-h-14">
+          {/* <span className="grid rtl top-2 right-3 grid-cols-2 absolute rtl:grid"> */}
           {workSkill.map((e, i) => (
-            <div key={`${e.skill}-${i}-${e.lv}`} className="flex items-center">
+            <div
+              key={`${e.skill}-${i}-${e.lv}`}
+              className="flex items-center bg-secondary"
+            >
+              <TypographySmall>{e.lv}</TypographySmall>
               <Image
                 alt={`${e.skill} lv ${e.lv}`}
                 src={`/icon/work/${e.skill}.webp`}
                 width={16}
                 height={16}
               />
-              <TypographySmall>{e.lv}</TypographySmall>
             </div>
           ))}
         </span>
