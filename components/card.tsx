@@ -37,18 +37,32 @@ export function Card({
   element,
   workSkill,
 }: CardProps) {
+  const caughtCounter = false
   const caughtNumber = parseInt(caught)
 
   return (
-    <div className="relative w-40 rounded bg-secondary">
+    <div className="relative w-40 h-[10.5rem] rounded bg-secondary">
       <div>
         {/* name */}
-        <span className="absolute left-2">
+        <span
+          className={
+            caughtCounter
+              ? `absolute left-2`
+              : 'absolute w-full text-center bottom-1.5'
+          }
+        >
           <TypographySmall>{name}</TypographySmall>
         </span>
 
+        {/* number */}
+        {!caughtCounter && (
+          <span className="absolute left-2">
+            <TypographySmall># {number}</TypographySmall>
+          </span>
+        )}
+
         {/* element */}
-        <span>
+        <span className={`absolute top-4`}>
           {element.map((e, i) => (
             <Image
               key={e}
@@ -56,7 +70,7 @@ export function Card({
               src={`/icon/element/${e}.webp`}
               width={20}
               height={20}
-              className={`absolute ${i === 0 ? 'top-6 left-2' : 'top-9 left-5'}`}
+              className={`relative ${i === 0 ? 'top-2 left-2' : 'left-5'}`}
             />
           ))}
           {/* <Image alt={e} /> */}
@@ -90,56 +104,65 @@ export function Card({
         />
       </div>
 
-      <Dialog>
-        <DialogTrigger asChild>
-          <Button
-            variant={'ghost'}
-            size={'sm'}
-            className="absolute right-[3.25rem] bottom-1 w-14 text-center hover:bg-primary-foreground/90"
-          >
-            <TypographySmall>{`${caught}/10`}</TypographySmall>
-          </Button>
-        </DialogTrigger>
-
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Capture count for {name}</DialogTitle>
-            <DialogDescription>
-              Enter the number of {name} pals you&apos;ve captured so far:
-            </DialogDescription>
-          </DialogHeader>
-          <div className="flex items-center space-x-2">
-            <div className="grid flex-1 gap-2">
-              <Label htmlFor="palsCaught" className="sr-only">
-                caught
-              </Label>
-              <Input
-                id="palsCaught"
-                type="number"
-                min={0}
-                defaultValue={caught}
-              />
-            </div>
-
-            <DialogClose asChild>
-              <Button type="submit" size="sm" className="px-3">
-                <span className="sr-only">Send</span>
-                <Send size={16} />
+      {caughtCounter ? (
+        <>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button
+                variant={'ghost'}
+                size={'sm'}
+                className="absolute right-[3.25rem] bottom-1 w-14 text-center hover:bg-primary-foreground/90"
+              >
+                <TypographySmall>{`${caught}/10`}</TypographySmall>
               </Button>
-            </DialogClose>
-          </div>
+            </DialogTrigger>
 
-          <DialogFooter className="sm:justify-start">
-            <DialogClose asChild>
-              <Button type="button" variant={'secondary'}>
-                Close
-              </Button>
-            </DialogClose>
-          </DialogFooter>
-        </DialogContent>
-      </Dialog>
+            <DialogContent>
+              <DialogHeader>
+                <DialogTitle>Capture count for {name}</DialogTitle>
+                <DialogDescription>
+                  Enter the number of {name} pals you&apos;ve captured so far:
+                </DialogDescription>
+              </DialogHeader>
+              <div className="flex items-center space-x-2">
+                <div className="grid flex-1 gap-2">
+                  <Label htmlFor="palsCaught" className="sr-only">
+                    caught
+                  </Label>
+                  <Input
+                    id="palsCaught"
+                    type="number"
+                    min={0}
+                    defaultValue={caught}
+                  />
+                </div>
 
-      <Progress value={(caughtNumber / 10) * 100} />
+                <DialogClose asChild>
+                  <Button type="submit" size="sm" className="px-3">
+                    <span className="sr-only">Send</span>
+                    <Send size={16} />
+                  </Button>
+                </DialogClose>
+              </div>
+
+              <DialogFooter className="sm:justify-start">
+                <DialogClose asChild>
+                  <Button type="button" variant={'secondary'}>
+                    Close
+                  </Button>
+                </DialogClose>
+              </DialogFooter>
+            </DialogContent>
+          </Dialog>
+
+          <Progress
+            className="absolute bottom-0"
+            value={(caughtNumber / 10) * 100}
+          />
+        </>
+      ) : (
+        ''
+      )}
     </div>
   )
 }

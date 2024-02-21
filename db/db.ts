@@ -1770,7 +1770,7 @@ export const pals: IPals = [
   {
     id: crypto.randomUUID(),
     name: 'Jetragon',
-    number: '',
+    number: '111',
     caught: '0',
     element: ['dragon'],
     workSkill: [{ skill: 'gathering', lv: '3' }],
