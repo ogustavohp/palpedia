@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import Image from 'next/image'
-import { TypographySmall } from './typography'
+import { Typography } from './typography'
 import { Progress } from './ui/progress'
 import {
   Dialog,
@@ -51,13 +51,13 @@ export const Card = memo(function Card({
               : 'absolute w-full text-center bottom-1.5'
           }
         >
-          <TypographySmall>{name}</TypographySmall>
+          <Typography variant="small">{name}</Typography>
         </span>
 
         {/* number */}
         {!caughtCounter && (
           <span className="absolute left-2">
-            <TypographySmall># {number}</TypographySmall>
+            <Typography variant="small"># {number}</Typography>
           </span>
         )}
 
@@ -84,7 +84,7 @@ export const Card = memo(function Card({
               key={`${e.skill}-${i}-${e.lv}`}
               className="flex items-center bg-secondary"
             >
-              <TypographySmall>{e.lv}</TypographySmall>
+              <Typography variant="small">{e.lv}</Typography>
               <Image
                 alt={`${e.skill} lv ${e.lv}`}
                 src={`/icon/work/${e.skill}.webp`}
@@ -113,7 +113,7 @@ export const Card = memo(function Card({
                 size={'sm'}
                 className="absolute right-[3.25rem] bottom-1 w-14 text-center hover:bg-primary-foreground/90"
               >
-                <TypographySmall>{`${caught}/10`}</TypographySmall>
+                <Typography variant="small">{`${caught}/10`}</Typography>
               </Button>
             </DialogTrigger>
 
