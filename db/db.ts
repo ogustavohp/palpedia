@@ -30,7 +30,7 @@ type IPals = {
       | 'watering'
     lv: '1' | '2' | '3' | '4'
   }[]
-  searchFilter: string[]
+  searchFilter: string
   image: string
 }[]
 
@@ -46,7 +46,7 @@ export const pals: IPals = [
       { skill: 'farming', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: 'Lamball',
     image: '/pal/icon/lamball.webp',
   },
   {
@@ -61,7 +61,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/cattiva.webp',
   },
   {
@@ -74,7 +74,7 @@ export const pals: IPals = [
       { skill: 'farming', lv: '1' },
       { skill: 'gathering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/chikipi.webp',
   },
   {
@@ -90,7 +90,7 @@ export const pals: IPals = [
       { skill: 'lumbering', lv: '1' },
       { skill: 'medicineProduction', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/lifmunk.webp',
   },
   {
@@ -100,7 +100,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['fire'],
     workSkill: [{ skill: 'kindling', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/foxparks.webp',
   },
   {
@@ -114,7 +114,7 @@ export const pals: IPals = [
       { skill: 'watering', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/fuack.webp',
   },
   {
@@ -128,7 +128,7 @@ export const pals: IPals = [
       { skill: 'generatingElectricity', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/sparkit.webp',
   },
   {
@@ -144,7 +144,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'lumbering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/tanzee.webp',
   },
   {
@@ -154,7 +154,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['fire'],
     workSkill: [{ skill: 'kindling', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/sparkit.webp',
   },
   {
@@ -169,7 +169,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/pengullet.webp',
   },
   {
@@ -185,7 +185,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '2' },
       { skill: 'handiwork', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/penking.webp',
   },
   {
@@ -195,7 +195,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['electric'],
     workSkill: [{ skill: 'generatingElectricity', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/jolthog.webp',
   },
   {
@@ -205,7 +205,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['ice'],
     workSkill: [{ skill: 'cooling', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/jolthogCryst.webp',
   },
   {
@@ -215,7 +215,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['grass', 'ground'],
     workSkill: [{ skill: 'planting', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/gumoss.webp',
   },
   {
@@ -228,7 +228,7 @@ export const pals: IPals = [
       { skill: 'farming', lv: '1' },
       { skill: 'gathering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/vixy.webp',
   },
   {
@@ -238,7 +238,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'gathering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/hoocrates.webp',
   },
   {
@@ -248,7 +248,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['water'],
     workSkill: [{ skill: 'watering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/teafant.webp',
   },
   {
@@ -262,7 +262,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/depresso.webp',
   },
   {
@@ -275,7 +275,7 @@ export const pals: IPals = [
       { skill: 'farming', lv: '1' },
       { skill: 'gathering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/cremis.webp',
   },
   {
@@ -289,7 +289,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/daedream.webp',
   },
   {
@@ -299,7 +299,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['ground'],
     workSkill: [{ skill: 'mining', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/rushoar.webp',
   },
   {
@@ -309,7 +309,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'gathering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/nox.webp',
   },
   {
@@ -323,7 +323,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/fuddler.webp',
   },
   {
@@ -336,7 +336,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '2' },
       { skill: 'gathering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/killamari.webp',
   },
   {
@@ -346,7 +346,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'farming', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/mau.webp',
   },
   {
@@ -359,7 +359,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '1' },
       { skill: 'farming', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/mauCryst.webp',
   },
   {
@@ -372,7 +372,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '1' },
       { skill: 'watering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/celaray.webp',
   },
   {
@@ -382,7 +382,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'gathering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/direhowl.webp',
   },
   {
@@ -392,7 +392,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'gathering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/tocotoco.webp',
   },
   {
@@ -408,7 +408,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'medicineProduction', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/flopie.webp',
   },
   {
@@ -418,7 +418,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'farming', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/mozzarina.webp',
   },
   {
@@ -434,7 +434,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'medicineProduction', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/bristla.webp',
   },
   {
@@ -448,7 +448,7 @@ export const pals: IPals = [
       { skill: 'watering', lv: '2' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/gobfin.webp',
   },
   {
@@ -462,7 +462,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'kindling', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/gobfinIgnis.webp',
   },
   {
@@ -476,7 +476,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/hangyu.webp',
   },
   {
@@ -491,7 +491,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/hangyuCryst.webp',
   },
   {
@@ -506,7 +506,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/mossanda.webp',
   },
   {
@@ -521,7 +521,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/mossandaLux.webp',
   },
   {
@@ -531,7 +531,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'farming', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/woolipop.webp',
   },
   {
@@ -544,7 +544,7 @@ export const pals: IPals = [
       { skill: 'planting', lv: '2' },
       { skill: 'farming', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/caprity.webp',
   },
   {
@@ -554,7 +554,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'farming', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/melpaca.webp',
   },
   {
@@ -564,7 +564,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'lumbering', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/eikthyrdeer.webp',
   },
   {
@@ -574,7 +574,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['ground'],
     workSkill: [{ skill: 'lumbering', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/eikthyrdeerTerra.webp',
   },
   {
@@ -584,7 +584,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'gathering', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/nitewing.webp',
   },
   {
@@ -598,7 +598,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/ribbuny.webp',
   },
   {
@@ -613,7 +613,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'kindling', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/incineram.webp',
   },
   {
@@ -627,7 +627,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '2' },
       { skill: 'handiwork', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/incineramNoct.webp',
   },
   {
@@ -640,7 +640,7 @@ export const pals: IPals = [
       { skill: 'planting', lv: '2' },
       { skill: 'medicineProduction', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/cinnamoth.webp',
   },
   {
@@ -653,7 +653,7 @@ export const pals: IPals = [
       { skill: 'kindling', lv: '2' },
       { skill: 'lumbering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/arsox.webp',
   },
   {
@@ -667,7 +667,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '1' },
       { skill: 'watering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/dumud.webp',
   },
   {
@@ -677,7 +677,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'lumbering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/cawgnito.webp',
   },
   {
@@ -691,7 +691,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/leezpunk.webp',
   },
   {
@@ -706,7 +706,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'kindling', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/leezpunkIgnis.webp',
   },
   {
@@ -716,7 +716,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'handiwork', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/loupmoon.webp',
   },
   {
@@ -726,7 +726,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'gathering', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/galeclaw.webp',
   },
   {
@@ -743,7 +743,7 @@ export const pals: IPals = [
       { skill: 'lumbering', lv: '1' },
       { skill: 'medicineProduction', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/robinquill.webp',
   },
   {
@@ -759,7 +759,7 @@ export const pals: IPals = [
       { skill: 'lumbering', lv: '1' },
       { skill: 'medicineProduction', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/robinquillTerra.webp',
   },
   {
@@ -773,7 +773,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/gorirat.webp',
   },
   {
@@ -791,7 +791,7 @@ export const pals: IPals = [
       { skill: 'lumbering', lv: '1' },
       { skill: 'medicineProduction', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/beegarde.webp',
   },
   {
@@ -807,7 +807,7 @@ export const pals: IPals = [
       { skill: 'lumbering', lv: '1' },
       { skill: 'medicineProduction', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/elizabee.webp',
   },
   {
@@ -817,7 +817,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'gathering', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/grintale.webp',
   },
   {
@@ -830,7 +830,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '1' },
       { skill: 'gathering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/swee.webp',
   },
   {
@@ -843,7 +843,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '2' },
       { skill: 'gathering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/sweepa.webp',
   },
   {
@@ -856,7 +856,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '1' },
       { skill: 'gathering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/chillet.webp',
   },
   {
@@ -869,7 +869,7 @@ export const pals: IPals = [
       { skill: 'generatingElectricity', lv: '2' },
       { skill: 'lumbering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/univolt.webp',
   },
   {
@@ -879,7 +879,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['ice'],
     workSkill: [{ skill: 'cooling', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/foxcicle.webp',
   },
   {
@@ -892,7 +892,7 @@ export const pals: IPals = [
       { skill: 'kindling', lv: '2' },
       { skill: 'lumbering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/pyrin.webp',
   },
   {
@@ -905,7 +905,7 @@ export const pals: IPals = [
       { skill: 'kindling', lv: '2' },
       { skill: 'lumbering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/pyrinNoct.webp',
   },
   {
@@ -918,7 +918,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/reindrix.webp',
   },
   {
@@ -928,7 +928,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['electric'],
     workSkill: [{ skill: 'generatingElectricity', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/rayhound.webp',
   },
   {
@@ -938,7 +938,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['fire'],
     workSkill: [{ skill: 'kindling', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/kitsun.webp',
   },
   {
@@ -952,7 +952,7 @@ export const pals: IPals = [
       { skill: 'generatingElectricity', lv: '1' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/dazzi.webp',
   },
   {
@@ -966,7 +966,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '1' },
       { skill: 'handiwork', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/lunaris.webp',
   },
   {
@@ -979,7 +979,7 @@ export const pals: IPals = [
       { skill: 'planting', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/Dinossom.webp',
   },
   {
@@ -992,7 +992,7 @@ export const pals: IPals = [
       { skill: 'generatingElectricity', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/dinossomLux.webp',
   },
   {
@@ -1002,7 +1002,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['water'],
     workSkill: [{ skill: 'watering', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/surfent.webp',
   },
   {
@@ -1012,7 +1012,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['ground'],
     workSkill: [{ skill: 'gathering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/surfentTerra.webp',
   },
   {
@@ -1025,7 +1025,7 @@ export const pals: IPals = [
       { skill: 'mining', lv: '1' },
       { skill: 'gathering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/maraith.webp',
   },
   {
@@ -1035,7 +1035,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['ground'],
     workSkill: [{ skill: 'mining', lv: '3' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/digtoise.webp',
   },
   {
@@ -1049,7 +1049,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '2' },
       { skill: 'gathering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/tombat.webp',
   },
   {
@@ -1064,7 +1064,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'medicineProduction', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/lovander.webp',
   },
   {
@@ -1079,7 +1079,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'kindling', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/flambelle.webp',
   },
   {
@@ -1092,7 +1092,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '3' },
       { skill: 'kindling', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/vanwyrm.webp',
   },
   {
@@ -1105,7 +1105,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '3' },
       { skill: 'cooling', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/vanwyrmCryst.webp',
   },
   {
@@ -1121,7 +1121,7 @@ export const pals: IPals = [
       { skill: 'kindling', lv: '2' },
       { skill: 'lumbering', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/bushi.webp',
   },
   {
@@ -1135,7 +1135,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '1' },
       { skill: 'generatingElectricity', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/beakon.webp',
   },
   {
@@ -1148,7 +1148,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '3' },
       { skill: 'kindling', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/ragnahawk.webp',
   },
   {
@@ -1162,7 +1162,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'medicineProduction', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/katress.webp',
   },
   {
@@ -1176,7 +1176,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '3' },
       { skill: 'kindling', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/wixen.webp',
   },
   {
@@ -1192,7 +1192,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '3' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/verdash.webp',
   },
   {
@@ -1208,7 +1208,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'medicineProduction', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/vaelet.webp',
   },
   {
@@ -1222,7 +1222,7 @@ export const pals: IPals = [
       { skill: 'farming', lv: '1' },
       { skill: 'medicineProduction', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/sibelyx.webp',
   },
   {
@@ -1232,7 +1232,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dragon'],
     workSkill: [{ skill: 'lumbering', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/elphidran.webp',
   },
   {
@@ -1245,7 +1245,7 @@ export const pals: IPals = [
       { skill: 'watering', lv: '3' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/elphidranAqua.webp',
   },
   {
@@ -1255,7 +1255,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['water'],
     workSkill: [{ skill: 'watering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/kelpsea.webp',
   },
   {
@@ -1265,7 +1265,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['fire'],
     workSkill: [{ skill: 'kindling', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/kelpseaIgnis.webp',
   },
   {
@@ -1275,7 +1275,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['water', 'dragon'],
     workSkill: [{ skill: 'watering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/azurobe.webp',
   },
   {
@@ -1289,7 +1289,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/cryolinx.webp',
   },
   {
@@ -1302,7 +1302,7 @@ export const pals: IPals = [
       { skill: 'kindling', lv: '3' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/blazehowl.webp',
   },
   {
@@ -1315,7 +1315,7 @@ export const pals: IPals = [
       { skill: 'kindling', lv: '3' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/blazehowlNoct.webp',
   },
   {
@@ -1328,7 +1328,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '1' },
       { skill: 'watering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/relaxaurus.webp',
   },
   {
@@ -1341,7 +1341,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '1' },
       { skill: 'generatingElectricity', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/relaxaurusLux.webp',
   },
   {
@@ -1351,7 +1351,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['grass'],
     workSkill: [{ skill: 'planting', lv: '3' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/broncherry.webp',
   },
   {
@@ -1361,7 +1361,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['grass', 'water'],
     workSkill: [{ skill: 'watering', lv: '3' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/broncherryAqua.webp',
   },
   {
@@ -1377,7 +1377,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'medicineProduction', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/petallia.webp',
   },
   {
@@ -1390,7 +1390,7 @@ export const pals: IPals = [
       { skill: 'mining', lv: '3' },
       { skill: 'kindling', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/reptyro.webp',
   },
   {
@@ -1403,7 +1403,7 @@ export const pals: IPals = [
       { skill: 'mining', lv: '3' },
       { skill: 'cooling', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/iceReptyro.webp',
   },
   {
@@ -1413,7 +1413,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'gathering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/kingpaca.webp',
   },
   {
@@ -1426,7 +1426,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '3' },
       { skill: 'gathering', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/iceKingpaca.webp',
   },
   {
@@ -1440,7 +1440,7 @@ export const pals: IPals = [
       { skill: 'planting', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/mammorest.webp',
   },
   {
@@ -1454,7 +1454,7 @@ export const pals: IPals = [
       { skill: 'cooling', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/mammorestCryst.webp',
   },
   {
@@ -1469,7 +1469,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'lumbering', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/wumpo.webp',
   },
   {
@@ -1484,7 +1484,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'lumbering', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/wumpoBotan.webp',
   },
   {
@@ -1499,7 +1499,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '1' },
       { skill: 'lumbering', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/warsect.webp',
   },
   {
@@ -1509,7 +1509,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['neutral'],
     workSkill: [{ skill: 'lumbering', lv: '2' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/fenglope.webp',
   },
   {
@@ -1519,7 +1519,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'medicineProduction', lv: '3' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/felbat.webp',
   },
   {
@@ -1534,7 +1534,7 @@ export const pals: IPals = [
       { skill: 'gathering', lv: '2' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/quivern.webp',
   },
   {
@@ -1547,7 +1547,7 @@ export const pals: IPals = [
       { skill: 'mining', lv: '4' },
       { skill: 'kindling', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/blazamut.webp',
   },
   {
@@ -1557,7 +1557,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'transporting', lv: '3' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/helzephyr.webp',
   },
   {
@@ -1570,7 +1570,7 @@ export const pals: IPals = [
       { skill: 'mining', lv: '4' },
       { skill: 'handiwork', lv: '1' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/astegon.webp',
   },
   {
@@ -1583,7 +1583,7 @@ export const pals: IPals = [
       { skill: 'mining', lv: '3' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/menasting.webp',
   },
   {
@@ -1597,7 +1597,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '2' },
       { skill: 'handiwork', lv: '4' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/anubis.webp',
   },
   {
@@ -1607,7 +1607,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dragon', 'water'],
     workSkill: [{ skill: 'watering', lv: '4' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/jormuntide.webp',
   },
   {
@@ -1617,7 +1617,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dragon', 'fire'],
     workSkill: [{ skill: 'kindling', lv: '4' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/jormuntideIgnis.webp',
   },
   {
@@ -1627,7 +1627,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['fire'],
     workSkill: [{ skill: 'kindling', lv: '3' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/suzaku.webp',
   },
   {
@@ -1637,7 +1637,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['water'],
     workSkill: [{ skill: 'watering', lv: '3' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/suzakuAqua.webp',
   },
   {
@@ -1652,7 +1652,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/grizzbolt.webp',
   },
   {
@@ -1667,7 +1667,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '3' },
       { skill: 'medicineProduction', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/lyleen.webp',
   },
   {
@@ -1681,7 +1681,7 @@ export const pals: IPals = [
       { skill: 'handiwork', lv: '3' },
       { skill: 'medicineProduction', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/lyleenNoct.webp',
   },
   {
@@ -1694,7 +1694,7 @@ export const pals: IPals = [
       { skill: 'transporting', lv: '3' },
       { skill: 'kindling', lv: '3' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/faleris.webp',
   },
   {
@@ -1708,7 +1708,7 @@ export const pals: IPals = [
       { skill: 'generatingElectricity', lv: '4' },
       { skill: 'handiwork', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/orserk.webp',
   },
   {
@@ -1718,7 +1718,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'gathering', lv: '1' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/shadowbeak.webp',
   },
   {
@@ -1731,7 +1731,7 @@ export const pals: IPals = [
       { skill: 'mining', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/paladius.webp',
   },
   {
@@ -1744,7 +1744,7 @@ export const pals: IPals = [
       { skill: 'mining', lv: '2' },
       { skill: 'lumbering', lv: '2' },
     ],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/necromus.webp',
   },
   {
@@ -1754,7 +1754,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['ice'],
     workSkill: [{ skill: 'cooling', lv: '4' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/frostallion.webp',
   },
   {
@@ -1764,7 +1764,7 @@ export const pals: IPals = [
     caught: '0',
     element: ['dark'],
     workSkill: [{ skill: 'gathering', lv: '4' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/frostallionNoct.webp',
   },
   {
@@ -1774,21 +1774,25 @@ export const pals: IPals = [
     caught: '0',
     element: ['dragon'],
     workSkill: [{ skill: 'gathering', lv: '3' }],
-    searchFilter: [''],
+    searchFilter: '',
     image: '/pal/icon/Jetragon.webp',
   },
 ]
 
 export const elements = [
-  { name: 'dark', value: 'dark', image: '/icon/element/dark.webp' },
-  { name: 'dragon', value: 'dragon', image: '/icon/element/dragon.webp' },
-  { name: 'electric', value: 'electric', image: '/icon/element/electric.webp' },
-  { name: 'fire', value: 'fire', image: '/icon/element/fire.webp' },
-  { name: 'grass', value: 'grass', image: '/icon/element/grass.webp' },
-  { name: 'ground', value: 'ground', image: '/icon/element/ground.webp' },
-  { name: 'ice', value: 'ice', image: '/icon/element/ice.webp' },
-  { name: 'neutral', value: 'neutral', image: '/icon/element/neutral.webp' },
-  { name: 'water', value: 'water', image: '/icon/element/water.webp' },
+  { name: 'dark', value: 'dark', srcImage: '/icon/element/dark.webp' },
+  { name: 'dragon', value: 'dragon', srcImage: '/icon/element/dragon.webp' },
+  {
+    name: 'electric',
+    value: 'electric',
+    srcImage: '/icon/element/electric.webp',
+  },
+  { name: 'fire', value: 'fire', srcImage: '/icon/element/fire.webp' },
+  { name: 'grass', value: 'grass', srcImage: '/icon/element/grass.webp' },
+  { name: 'ground', value: 'ground', srcImage: '/icon/element/ground.webp' },
+  { name: 'ice', value: 'ice', srcImage: '/icon/element/ice.webp' },
+  { name: 'neutral', value: 'neutral', srcImage: '/icon/element/neutral.webp' },
+  { name: 'water', value: 'water', srcImage: '/icon/element/water.webp' },
 ]
 
 export const workSuitability = [
