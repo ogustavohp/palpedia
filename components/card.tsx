@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { memo } from 'react'
 import Image from 'next/image'
 import { TypographySmall } from './typography'
 import { Progress } from './ui/progress'
@@ -29,7 +29,7 @@ interface CardProps {
   }[]
 }
 
-export function Card({
+export const Card = memo(function Card({
   name,
   caught,
   imagePath,
@@ -41,7 +41,7 @@ export function Card({
   const caughtNumber = parseInt(caught)
 
   return (
-    <div className="relative w-40 h-[10.5rem] rounded bg-secondary">
+    <div className="relative w-40 h-[10.5rem] mt-4 rounded bg-secondary">
       <div>
         {/* name */}
         <span
@@ -165,4 +165,4 @@ export function Card({
       )}
     </div>
   )
-}
+})
