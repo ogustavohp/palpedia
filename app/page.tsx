@@ -88,22 +88,27 @@ export default function Home() {
   useEffect(() => {
     function filterPals() {
       let filtered = palsDb.filter((pal) =>
-        pal.name.toLowerCase().includes(inputSearch),
+        pal.name.toLowerCase().includes(inputSearch.toLowerCase()),
       )
-      if (elementSearch.length > 0) {
+
+      if (elementSearch.length) {
         filtered = filtered.filter((pal) =>
           elementSearch.every((element) => pal.element.includes(element)),
         )
       }
+
       if (workSearch.length) {
         filtered = filtered.filter((pal) =>
           workSearch.every((work) =>
+            // if change some for every filter for only pals have this skill
             pal.workSkill.some((workObj) => workObj.skill === work),
           ),
         )
       }
+
       setFilteredPals(filtered)
     }
+
     filterPals()
   }, [elementSearch, inputSearch, workSearch])
 
