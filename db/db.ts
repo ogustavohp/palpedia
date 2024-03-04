@@ -11899,7 +11899,11 @@ export const palsBreading: palsBreadingType = [
   { pal: 'Jetragon', parents: [['Jetragon', 'Jetragon']] },
 ]
 
-export const breedingMap = {
+export type breedingMapType = {
+  [key: string]: Array<[string, string]>
+}
+
+export const breedingMap: breedingMapType = {
   Lamball: [
     ['Lamball', 'Lamball'],
     ['Lamball', 'Cattiva'],
