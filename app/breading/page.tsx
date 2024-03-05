@@ -92,6 +92,10 @@ export default function Breading() {
         for (const parentPair of possibleParents) {
           const [parent1, parent2] = parentPair
 
+          // if (!visited.has(parent1) && !visited.has(parent2)) {
+          //   queue.push([parent1, parents.concat([parentPair])])
+          //   queue.push([parent2, parents.concat([parentPair])])
+          // }
           if (!visited.has(parent1) && !visited.has(parent2)) {
             queue.push([parent1, parents.concat([parentPair])])
             queue.push([parent2, parents.concat([parentPair])])
@@ -107,23 +111,29 @@ export default function Breading() {
     return combinations
   }
 
-  console.log(
-    findBreedingCombination('Frostallion Noct', 'Anubis', breedingMapDb),
+  const resultPals = findBreedingCombination(
+    'Frostallion Noct',
+    'Anubis',
+    breedingMapDb,
   )
+
+  console.log(resultPals)
+
+  if (typeof resultPals === 'string') {
+    return
+  }
+
   return (
-    // <>
-    //   {palsBreadingDb.map((pal, i) => {
-    //     const uniqueArray = uniqueElements(pal.parents)
-    //     return (
-    //       <>
-    //         <Typography key={i}>{pal.pal}</Typography>
-    //         <Typography key={i}>
-    //           [{uniqueArray.map((e) => `"${e}"`).join(', ')}],
-    //         </Typography>
-    //       </>
-    //     )
-    //   })}
-    // </>
-    <Typography>oi</Typography>
+    <Typography>
+      <div className="flex gap-4 flex-col">
+        {resultPals.map((e, i) => (
+          <div className="" key={`${e}-${i}`}>
+            {e.map((e, i) => (
+              <div key={`${e}-${i}`}>{`${e[0]} + ${e[1]} = `}</div>
+            ))}
+          </div>
+        ))}
+      </div>
+    </Typography>
   )
 }
