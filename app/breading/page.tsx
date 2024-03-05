@@ -92,13 +92,10 @@ export default function Breading() {
         for (const parentPair of possibleParents) {
           const [parent1, parent2] = parentPair
 
-          // if (!visited.has(parent1) && !visited.has(parent2)) {
-          //   queue.push([parent1, parents.concat([parentPair])])
-          //   queue.push([parent2, parents.concat([parentPair])])
-          // }
           if (!visited.has(parent1) && !visited.has(parent2)) {
-            queue.push([parent1, parents.concat([parentPair])])
-            queue.push([parent2, parents.concat([parentPair])])
+            const newParents = [...parents, parentPair]
+            queue.push([parent1, newParents])
+            queue.push([parent2, newParents])
           }
         }
       }
@@ -111,29 +108,57 @@ export default function Breading() {
     return combinations
   }
 
+  function findBreedingCombination2(
+    targetPal: keyof typeof breedingMapDb,
+    ancestorPal: keyof typeof breedingMapDb,
+    breedingMap: breedingMapType,
+  ) {
+    // console.log(targetPal)
+    // console.log(ancestorPal)
+    // console.log(breedingMap)
+  }
+  findBreedingCombination2('Frostallion Noct', 'Anubis', breedingMapDb)
+
   const resultPals = findBreedingCombination(
     'Frostallion Noct',
     'Anubis',
     breedingMapDb,
   )
 
-  console.log(resultPals)
+  // console.log(resultPals)
 
   if (typeof resultPals === 'string') {
     return
   }
 
+  function findCombination(array: string[]) {
+    for (const key in breedingMapDb) {
+      if (Object.prototype.hasOwnProperty.call(breedingMapDb, key)) {
+        const subArrays = breedingMapDb[key]
+
+        for (const subarray of subArrays) {
+          if (array.every((element) => subarray.includes(element))) {
+            return key
+          }
+        }
+      }
+    }
+    return null // Retorna null se não encontrar correspondência
+  }
+
+  console.log(findCombination(['Faleris', 'Anubis']))
+
   return (
-    <Typography>
-      <div className="flex gap-4 flex-col">
-        {resultPals.map((e, i) => (
-          <div className="" key={`${e}-${i}`}>
-            {e.map((e, i) => (
-              <div key={`${e}-${i}`}>{`${e[0]} + ${e[1]} = `}</div>
-            ))}
-          </div>
-        ))}
-      </div>
-    </Typography>
+    <div className="flex gap-4 flex-col">
+      {resultPals.map((e, i) => (
+        <div className="" key={`${e}-${i}`}>
+          {e.map((e, i) => (
+            <div
+              key={`${e}-${i}`}
+            >{`${e[0]} + ${e[1]} = ${findCombination(e)} `}</div>
+          ))}
+        </div>
+      ))}
+    </div>
   )
 }
