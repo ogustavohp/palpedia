@@ -1,9 +1,11 @@
-import { Typography } from '@/components/typography'
-import { breedingMap, breedingMapType } from '@/db/db'
+import { Card } from '@/components/card'
+import { breedingMap, breedingMapType, pals } from '@/db/db'
+import { Equal, PlusCircle } from 'lucide-react'
 
 // const palsBreadingDb = palsBreading
 
 const breedingMapDb = breedingMap
+const palsDb = pals
 
 export default function Breading() {
   // function uniqueElements(arr: string[][]): string[] {
@@ -108,16 +110,16 @@ export default function Breading() {
     return combinations
   }
 
-  function findBreedingCombination2(
-    targetPal: keyof typeof breedingMapDb,
-    ancestorPal: keyof typeof breedingMapDb,
-    breedingMap: breedingMapType,
-  ) {
-    // console.log(targetPal)
-    // console.log(ancestorPal)
-    // console.log(breedingMap)
-  }
-  findBreedingCombination2('Frostallion Noct', 'Anubis', breedingMapDb)
+  // function findBreedingCombination2(
+  //   targetPal: keyof typeof breedingMapDb,
+  //   ancestorPal: keyof typeof breedingMapDb,
+  //   breedingMap: breedingMapType,
+  // ) {
+  // console.log(targetPal)
+  // console.log(ancestorPal)
+  // console.log(breedingMap)
+  // }
+  // findBreedingCombination2('Frostallion Noct', 'Anubis', breedingMapDb)
 
   const resultPals = findBreedingCombination(
     'Frostallion Noct',
@@ -143,20 +145,68 @@ export default function Breading() {
         }
       }
     }
-    return null // Retorna null se não encontrar correspondência
+    return '' // Retorna null se não encontrar correspondência
   }
 
   console.log(findCombination(['Faleris', 'Anubis']))
 
+  function findPalObj(palName: string) {
+    return palsDb.find((obj) => obj.name === palName)
+  }
+
   return (
-    <div className="flex gap-4 flex-col">
+    <div className="flex gap-4 flex-wrap">
       {resultPals.map((e, i) => (
-        <div className="" key={`${e}-${i}`}>
-          {e.map((e, i) => (
-            <div
-              key={`${e}-${i}`}
-            >{`${e[0]} + ${e[1]} = ${findCombination(e)} `}</div>
-          ))}
+        <div
+          className="bg-primary-foreground rounded pb-4 px-4"
+          key={`${e}-${i}`}
+        >
+          {e.map((e, i) => {
+            const parent1 = findPalObj(e[0])
+            const parent2 = findPalObj(e[1])
+            const palResult = findPalObj(findCombination(e))
+            if (!parent1 || !parent2 || !palResult) {
+              return (
+                <div key={`${e}+${i}`}>
+                  {e[0]}+{e[1]}+{e[2]}
+                </div>
+              )
+            }
+
+            return (
+              <div
+                className="flex gap-2 justify-center items-center"
+                key={`${e}-${i}`}
+              >
+                <Card
+                  name={parent1.name}
+                  imagePath={parent1.image}
+                  number={parent1.number}
+                  element={parent1.element}
+                  caught={parent1.caught}
+                  workSkill={parent1.workSkill}
+                />
+                <PlusCircle />
+                <Card
+                  name={parent2.name}
+                  imagePath={parent2.image}
+                  number={parent2.number}
+                  element={parent2.element}
+                  caught={parent2.caught}
+                  workSkill={parent2.workSkill}
+                />
+                <Equal />
+                <Card
+                  name={palResult.name}
+                  imagePath={palResult.image}
+                  number={palResult.number}
+                  element={palResult.element}
+                  caught={palResult.caught}
+                  workSkill={palResult.workSkill}
+                />
+              </div>
+            )
+          })}
         </div>
       ))}
     </div>

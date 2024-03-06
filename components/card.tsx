@@ -19,7 +19,7 @@ import { Send } from 'lucide-react'
 
 interface CardProps {
   name: string
-  caught: string
+  caught?: string
   imagePath: string
   number: string
   element: string[]
@@ -31,7 +31,7 @@ interface CardProps {
 
 export const Card = memo(function Card({
   name,
-  caught,
+  caught = '0',
   imagePath,
   number,
   element,
