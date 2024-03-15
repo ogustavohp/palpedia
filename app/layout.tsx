@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br">
-      <body className={`${inter.className} max-w-screen-2xl mx-auto`}>
+      <body className={`${inter.className}  mx-auto`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -26,7 +26,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="flex min-h-screen flex-col items-center justify-between p-24">
+          <main className="flex min-h-screen flex-col items-center justify-between p-24 max-w-screen-2xl mx-auto">
             {children}
           </main>
         </ThemeProvider>

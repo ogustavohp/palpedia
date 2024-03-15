@@ -1779,12 +1779,12 @@ export const pals: palsType = [
   },
 ]
 
-type palsBreadingType = {
+type palsBreedingType = {
   pal: string
   parents: string[][]
 }[]
 
-export const palsBreading: palsBreadingType = [
+export const palsBreeding: palsBreedingType = [
   {
     pal: 'Lamball',
     parents: [

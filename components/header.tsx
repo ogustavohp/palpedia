@@ -5,11 +5,11 @@ import Link from 'next/link'
 
 export function Header() {
   return (
-    <header className="mx-6 mt-6 flex justify-between">
+    <header className="px-6 mt-6 flex justify-between max-w-screen-2xl mx-auto">
       <div className="flex items-center justify-center flex-col sm:flex-row gap-4 lg:gap-20">
         <Typography variant="h1">Palpedia</Typography>
-        <Link href={'/breading'}>
-          <Typography>Breading</Typography>
+        <Link href={'/breeding'}>
+          <Typography>Breeding</Typography>
         </Link>
       </div>
       <ModeToggle />
