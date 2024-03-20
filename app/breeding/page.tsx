@@ -17,7 +17,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { breedingMap, breedingMapType, pals } from '@/db/db'
 import { Equal, Plus, User } from 'lucide-react'
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useEffect, useState } from 'react'
 
 const breedingMapDb = breedingMap
 const palsDb = pals
@@ -36,6 +36,9 @@ export default function Breeding() {
   const [filteredPals, setFilteredPals] = useState(palsDb)
   const [targetPal, setTargetPal] = useState<targetPalType>()
   const [ancestorPal, setAncestorPal] = useState<ancestorPalType>()
+  const [resultBreeding, setResultBreeding] = useState<string | string[][][]>(
+    '',
+  )
   // function uniqueElements(arr: string[][]): string[] {
   //   const uniqueElementsSet: Set<string> = new Set()
 
@@ -139,12 +142,36 @@ export default function Breeding() {
   }
 
   const resultPals = findBreedingCombination(
-    'Frostallion Noct',
-    'Anubis',
+    'Cattiva',
+    'Chikipi',
     breedingMapDb,
   )
 
   // console.log(resultPals)
+
+  useEffect(() => {
+    function findPal() {
+      if (targetPal && ancestorPal) {
+        const breedingCombinationResult = findBreedingCombination(
+          targetPal.palName,
+          ancestorPal.palName,
+          breedingMapDb,
+        )
+        return breedingCombinationResult
+      }
+
+      if (targetPal) {
+        // const breedingCombinationResult = {
+        //   targetPal: targetPal.palName,
+        //   BreedingCombination: breedingMapDb[targetPal.palName],
+        // }
+        return [breedingMapDb[targetPal.palName]]
+      }
+
+      return ''
+    }
+    setResultBreeding(findPal())
+  }, [targetPal, ancestorPal])
 
   if (typeof resultPals === 'string') {
     return
@@ -156,7 +183,10 @@ export default function Breeding() {
         const subArrays = breedingMapDb[key]
 
         for (const subarray of subArrays) {
-          if (array.every((element) => subarray.includes(element))) {
+          if (
+            (subarray[0] === array[0] && subarray[1] === array[1]) ||
+            (subarray[0] === array[1] && subarray[1] === array[0])
+          ) {
             return key
           }
         }
@@ -164,8 +194,6 @@ export default function Breeding() {
     }
     return '' // Retorna null se não encontrar correspondência
   }
-
-  // console.log(findCombination(['Faleris', 'Anubis']))
 
   function findPalObj(palName: string) {
     return palsDb.find((obj) => obj.name === palName)
@@ -328,7 +356,64 @@ export default function Breeding() {
         </div>
       </div>
       <div className="flex justify-center gap-4 flex-wrap">
-        {resultPals.map((e, i) => (
+        {typeof resultBreeding === 'string' ? (
+          <div>{resultBreeding}</div>
+        ) : (
+          resultBreeding.map((e, i) => (
+            <div
+              className="bg-primary-foreground rounded pb-4 px-4"
+              key={`${e}-${i}`}
+            >
+              {e.map((e, i) => {
+                const parent1 = findPalObj(e[0])
+                const parent2 = findPalObj(e[1])
+                const palResult = findPalObj(findCombination(e))
+                if (!parent1 || !parent2 || !palResult) {
+                  return (
+                    <div key={`${e}+${i}`}>
+                      {e[0]}+{e[1]}+{e[2]}
+                    </div>
+                  )
+                }
+
+                return (
+                  <div
+                    className="flex gap-2 justify-center items-center"
+                    key={`${e}-${i}`}
+                  >
+                    <Card
+                      name={parent1.name}
+                      imagePath={parent1.image}
+                      number={parent1.number}
+                      element={parent1.element}
+                      caught={parent1.caught}
+                      workSkill={parent1.workSkill}
+                    />
+                    <Plus />
+                    <Card
+                      name={parent2.name}
+                      imagePath={parent2.image}
+                      number={parent2.number}
+                      element={parent2.element}
+                      caught={parent2.caught}
+                      workSkill={parent2.workSkill}
+                    />
+                    <Equal />
+                    <Card
+                      name={palResult.name}
+                      imagePath={palResult.image}
+                      number={palResult.number}
+                      element={palResult.element}
+                      caught={palResult.caught}
+                      workSkill={palResult.workSkill}
+                    />
+                  </div>
+                )
+              })}
+            </div>
+          ))
+        )}
+        {/* {resultPals.map((e, i) => (
           <div
             className="bg-primary-foreground rounded pb-4 px-4"
             key={`${e}-${i}`}
@@ -380,7 +465,7 @@ export default function Breeding() {
               )
             })}
           </div>
-        ))}
+        ))} */}
       </div>
     </div>
   )
